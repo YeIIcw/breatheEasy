@@ -40,7 +40,7 @@ const Components = () => {
                     <Cards />
                     <Dropdowns />
                     <PageForm />
-                    <PageTable />
+                    {/* <PageTable /> */}
                     <Notification />
                     <TooltipPopover />
                     <Typography />

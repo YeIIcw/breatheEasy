@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { Container, Row, Col } from 'reactstrap';
 import { useState, useEffect } from 'react';
 import { Button} from 'reactstrap';
+import PageTable from "../../views/components/sections/table.jsx";
 
 
 
@@ -93,6 +94,7 @@ const HeaderBanner = () => {
     };
 
     return (
+        <div>
         <div className="static-slider-head">
             <Container>
                 <Row className="justify-content-center">
@@ -132,6 +134,9 @@ const HeaderBanner = () => {
                     </Col>
                 </Row>
             </Container>
+        </div>
+
+        <PageTable data={data}/>
         </div>
     );
 }
