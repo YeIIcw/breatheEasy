@@ -22,16 +22,6 @@ const Header = () => {
                         <NavbarToggler onClick={toggle}><span className="ti-menu"></span></NavbarToggler>
                         <Collapse isOpen={isOpen} navbar className="hover-dropdown font-14 ml-auto" id="h6-info">
                             <Nav navbar className="ml-auto">
-                                <NavItem>
-                                    <Link className="nav-link" to={"/components"}>
-                                        Home
-										</Link>
-                                </NavItem>
-                                <NavItem>
-                                    <Link className="nav-link" to={"/custom-components"}>
-                                        Weather
-                                    	</Link>
-                                </NavItem>
                             </Nav>
                             <div className="act-buttons">
                                 <Link to="/#notify" className="btn btn-success-gradiant font-14">Notify Me</Link>
