@@ -125,6 +125,7 @@
       color: $table-head-color;
       background-color: $table-head-bg;
       border-color: $table-border-color;
+      font-size: 5pt;
     }
   }
 }
@@ -184,4 +185,12 @@
       }
     }
   }
+}
+
+.table-responsive{
+    .table {
+         
+        color:purple;
+        
+    }       
 }

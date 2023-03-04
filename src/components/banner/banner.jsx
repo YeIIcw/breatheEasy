@@ -93,16 +93,35 @@ const HeaderBanner = () => {
         }
     };
 
+    function formatLonLat(degree, type) {
+        if (type == "lat") {
+            if (degree >= 0) {
+                return (degree + "\u00B0 N")
+            }
+            else {
+                return ((-1) * degree + "\u00B0 S")
+            }
+        }
+        else {
+            if (degree >= 0) {
+                return (degree + "\u00B0 E")
+            }
+            else {
+                return ((-1) * degree + "\u00B0 W")
+            }
+        }
+    }
+
     return (
         <div>
         <div className="static-slider-head">
             <Container>
                 <Row className="justify-content-center">
                     <Col lg="8" md="6" className="align-self-center text-center">
-                        <h1>Air Quality Detector</h1>
+                        <h1>BreatheEasy.</h1>
                         <input 
                             type="text" 
-                            placeholder="Enter a Location..." 
+                            placeholder="Enter a City..." 
                             class="location-search-box" 
                             onKeyDown={handleKeyPress}
                             />
@@ -111,25 +130,25 @@ const HeaderBanner = () => {
                                 <div class="location">
                                     <div class="city">{location}</div>
                                     <div class="date">{date}</div>
-                                    <div class="lat">Lat {lat}</div>
-                                    <div class="lon">Lon {lon}</div>
+                                    <div class="lat">Latitude: {formatLonLat(lat, "lat")} </div>
+                                    <div class="lon">Longitude: {formatLonLat(lon, "lon")}</div>
                                 </div>
                             )}
                             
                         </div>
                         <div>
-                            {aqi === 1 && <Button color="success">Good</Button>}
+                            {aqi === 1 && <Button color="success">Great</Button>}
                             {aqi === 2 && <Button color="success">Moderate</Button>}
                             {aqi === 3 && <Button color="warning">Unhealthy</Button>}
-                            {aqi === 4 && <Button color="warning">Very Unhealthy</Button>}
-                            {aqi === 5 && <Button color="danger">Hazardous</Button>}
+                            {aqi === 4 && <Button color="danger">Very Unhealthy</Button>}
+                            {aqi === 5 && <Button color="danger">Dangerous</Button>}
                         </div>
-                        <div>
-                            {aqi === 1 && <div>	Air quality is considered satisfactory, and air pollution poses little or no risk</div>}
-                            {aqi === 2 && <div>	Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</div>}
-                            {aqi === 3 && <div>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</div>}
-                            {aqi === 4 && <div>Health warnings of emergency conditions. The entire population is more likely to be affected.</div>}
-                            {aqi === 5 && <div>Health alert: everyone may experience more serious health effects</div>}
+                        <div className = "rating-description">
+                            {aqi === 1 && <div>	The air quality is ideal for most individuals; enjoy your normal outdoor activities.</div>}
+                            {aqi === 2 && <div>	The air quality is generally acceptable for most individuals. However, sensitive groups may experience minor to moderate symptoms from long-term exposure.</div>}
+                            {aqi === 3 && <div> The air has reached a high level of pollution and is unhealthy for sensitive groups. Reduce time spent outside if you are feeling symptoms such as difficulty breathing or throat irritation.</div>}
+                            {aqi === 4 && <div> Health effects can be immediately felt by sensitive groups. Healthy individuals may experience difficulty breathing and throat irritation with prolonged exposure. Limit outdoor activity.</div>}
+                            {aqi === 5 && <div> Health effects will be immediately felt by sensitive groups and should avoid outdoor activity. Healthy individuals are likely to experience difficulty breathing and throat irritation; consider staying indoors and rescheduling outdoor activities.</div>}
                         </div>
                     </Col>
                 </Row>

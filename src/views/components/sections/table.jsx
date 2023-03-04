@@ -1,5 +1,7 @@
 import React , {useState, useEffect} from 'react';
-import { Container, Row, Col, Table } from 'reactstrap';
+import { Container, Row, Col, Table, Button} from 'reactstrap';
+import SeverityButton from './sevButton';
+
 
 const PageTable = (props) => {
     const [SO2, setSO2] = useState('TBD');
@@ -21,19 +23,10 @@ const PageTable = (props) => {
         //pass
     }
 
+    // console.log(SO2)
 
     return (
         <div>
-            <div className="spacer" id="table-component">
-                <Container>
-                    <Row className="justify-content-center">
-                        <Col md="7" className="text-center">
-                            <h1 className="title font-bold">Table</h1>
-                            <h6 className="subtitle">Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &amp; dashboard in No-time.</h6>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
             <Container>
                 <Row>
                     <Col md="12">
@@ -50,12 +43,13 @@ const PageTable = (props) => {
                                 <tbody>
                                     <tr>
                                         <td>SO<sub>2</sub></td>
-                                        <td>Short-term exposure to sulfur dioxide irritates <br/>
+                                        <td className = "table-description">Short-term exposure to sulfur dioxide irritates <br/>
                                             the airways, causing coughing, wheezing, and <br/>
                                             tightness in the chest. Long-term exposure may <br/>
                                             result in decreased lung capacity.</td>
                                         <td>{SO2}</td>
-                                        <td><span className="label label-danger">admin</span> </td>
+                                        
+                                        <td>{<SeverityButton value={SO2} mode = "so2"/>}</td>
                                     </tr>
                                     <tr>
                                         <td>NO<sub>2</sub> </td>
@@ -64,7 +58,7 @@ const PageTable = (props) => {
                                             increase susceptibility to respiratory <br/> 
                                             infections and to allergens.</td>
                                         <td>{NO2}</td>
-                                        <td><span className="label label-info">member</span> </td>
+                                        <td>{<SeverityButton value={NO2} mode = "no2"/>} </td>
                                     </tr>
                                     <tr>
                                         <td>PM<sub>10</sub></td>
@@ -73,7 +67,7 @@ const PageTable = (props) => {
                                             from asthma attacks and bronchitis, to <br/>
                                             strokes and premature death.</td>
                                         <td>{PM10}</td>
-                                        <td><span className="label label-warning">developer</span> </td>
+                                        <td>{<SeverityButton value={PM10} mode = "pm10"/>} </td>
                                     </tr>
                                     <tr>
                                         <td>PM<sub>2.5</sub></td>
@@ -82,7 +76,7 @@ const PageTable = (props) => {
                                             irritate and corrode the alveolar wall, <br/>
                                             and consequently impair lung function.</td>
                                         <td>{PM25}</td>
-                                        <td><span className="label label-success">supporter</span> </td>
+                                        <td>{<SeverityButton value={PM25} mode = "pm25"/>} </td>
                                     </tr>
                                     <tr>
                                         <td>O<sub>3</sub></td>
@@ -93,7 +87,7 @@ const PageTable = (props) => {
                                             throat irritation, and congestion.</td>
 
                                         <td>{O3}</td>
-                                        <td><span className="label label-info">member</span> </td>
+                                        <td>{<SeverityButton value={O3} mode = "o3"/>} </td>
                                     </tr>
                                     <tr>
                                         <td>CO</td>
@@ -102,7 +96,7 @@ const PageTable = (props) => {
                                             and deprives the heart, brain <br/>
                                             and other vital organs of oxygen.</td>
                                         <td>{CO}</td>
-                                        <td><span className="label label-success">supporter</span> </td>
+                                        <td>{<SeverityButton value={CO} mode = "co"/>} </td>
                                     </tr>
                                 </tbody>
                             </Table>

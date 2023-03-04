@@ -32,20 +32,6 @@ const Components = () => {
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
-                    <Buttons />
-                    <Labels />
-                    <PagePagination />
-                    <Images />
-                    <Breadcrumbs />
-                    <Cards />
-                    <Dropdowns />
-                    <PageForm />
-                    {/* <PageTable /> */}
-                    <Notification />
-                    <TooltipPopover />
-                    <Typography />
-                    <JsComponents />
-                    <CallToAction />
                 </div>
             </div>
             <Footer />
