@@ -34,7 +34,7 @@ const Header = () => {
                                 </NavItem>
                             </Nav>
                             <div className="act-buttons">
-                                <Link to="/#coming" className="btn btn-success-gradiant font-14">Notify Me</Link>
+                                <Link to="/#notify" className="btn btn-success-gradiant font-14">Notify Me</Link>
                             </div>
                         </Collapse>
                     </Navbar>
