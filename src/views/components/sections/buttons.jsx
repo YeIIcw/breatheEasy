@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Row, Col } from 'reactstrap';
 
 const Buttons = () => {
+    let aqi = 1;
     return (
         <div id="element">
             <div className="spacer" id="reactstrap-components">
