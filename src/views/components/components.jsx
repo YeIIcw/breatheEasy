@@ -23,6 +23,7 @@ import TooltipPopover from "./sections/tooltip-popover.jsx";
 import Typography from "./sections/typography.jsx";
 import JsComponents from "./sections/js-components.jsx";
 import CallToAction from "../../components/call-to-action/CallToAction"
+import Table from "./sections/table.jsx";
 
 
 const Components = () => {
