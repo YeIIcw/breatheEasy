@@ -25,6 +25,7 @@ import JsComponents from "./sections/js-components.jsx";
 import CallToAction from "../../components/call-to-action/CallToAction"
 import Table from "./sections/table.jsx";
 import ContactComponent from "../custom-components/sections/contactcomponent.jsx";
+import ForecastTable from "./sections/forecast.jsx";
 
 
 const Components = () => {
@@ -34,7 +35,6 @@ const Components = () => {
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
-                    <Table />
                     <ContactComponent />
                 </div>
             </div>
