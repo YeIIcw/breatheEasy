@@ -105,58 +105,7 @@ const PageTable = (props) => {
                 </Row>
             </Container>
             <div>
-            <div className="spacer" id="table-component">
-                <Container>
-                    <Row className="justify-content-center">
-                        <Col md="7" className="text-center">
-                            <h1 className="title font-bold">Forecast</h1>
-                            <h6 className="subtitle">Here are the predicted concentrations for the next 5 days</h6>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-            <Container>
-                <Row>
-                    <Col md="12">
-                        <div className="table-responsive">
-                            <Table>
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Deshmukh</td>
-                                        <td>Status</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Deshmukh</td>      
-                                        <td>Status</td>                           
-                                    </tr>
-                                    <tr>
-                                        <td>Sanghani</td>     
-                                        <td>Status</td>                            
-                                    </tr>
-                                    <tr>
-                                        <td>Roshan</td>   
-                                        <td>Status</td>                            
-                                    </tr>
-                                    <tr>
-                                        <td>Joshi</td>  
-                                        <td>Status</td>                           
-                                    </tr>
-                                    <tr>
-                                        <td>Nigam</td> 
-                                        <td>Status</td>                                
-                                    </tr>
-                                </tbody>
-                            </Table>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+           
         </div>
         </div>
     );

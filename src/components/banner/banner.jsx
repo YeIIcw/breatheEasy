@@ -10,6 +10,7 @@ import PageTable from "../../views/components/sections/table.jsx";
 const HeaderBanner = () => {
 
     const [data, setData] = useState(); 
+    const [forecast, setForecast] = useState();
     const [city, setCity] = useState();
     const [location, setLocation] = useState("Location");
     const [date, setDate] = useState(getCurrentDate);
@@ -48,6 +49,7 @@ const HeaderBanner = () => {
         }
     }
 
+
     function getLocation(city){
         try{
             fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
@@ -70,7 +72,6 @@ const HeaderBanner = () => {
     {
         setData(ap)
         setAqi(ap.list[0].main.aqi)
-        
     }
 
     function displayResults(weather){

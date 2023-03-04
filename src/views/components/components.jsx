@@ -38,7 +38,6 @@ const Components = () => {
                     <ContactComponent />
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
