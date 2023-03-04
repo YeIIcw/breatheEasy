@@ -29,7 +29,7 @@ const Header = () => {
                                 </NavItem>
                                 <NavItem>
                                     <Link className="nav-link" to={"/custom-components"}>
-                                        Other
+                                        Weather
                                     	</Link>
                                 </NavItem>
                             </Nav>

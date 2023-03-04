@@ -1759,3 +1759,29 @@ a.btn-outline-success {
     background-position: top 20% center;
     background-image: $c2a-image;
 }
+
+.location-search-box{
+    height: 3rem;
+    margin-bottom: 1rem;
+    /*   display: inline; */
+    background: rgba(0,0,0,.2);
+    font-size: 1.5rem;
+    border-radius:  3px;
+    border: 1px solid #fff;
+    outline: none;
+    position: relative;
+    opacity: 1;
+    transition: all .75s ease-in;
+    cursor: pointer;
+
+    input {
+        color: #ccc;
+        border: 0;
+        background: transparent;
+        border-radius: 3px 0 0 3px;
+        &:focus {
+            outline: 0;
+            background:transparent;
+        }
+    }
+}
